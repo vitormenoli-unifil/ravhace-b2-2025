@@ -12,11 +12,19 @@ public class No {
         return 1 + contarNos(node.esquerda) + contarNos(node.direita);
     }
 
-    public void PreOrdem(No node) {
+    public void buscaPreOrdem(No node) {
         if (node != null) {
             System.out.print(node.valor + " ");
-            PreOrdem(node.esquerda);
-            PreOrdem(node.direita);
+            buscaPreOrdem(node.esquerda);
+            buscaPreOrdem(node.direita);
+        }
+    }
+
+    public void buscaEmOrdem(No node) {
+        if (node != null) {
+            buscaEmOrdem(node.esquerda);
+            System.out.print(node.valor + " ");
+            buscaEmOrdem(node.direita);
         }
     }
 }
