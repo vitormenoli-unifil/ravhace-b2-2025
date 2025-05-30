@@ -45,5 +45,13 @@ public class Main {
         // 6) Contar folhas (iterativo)
         int totalFolhas = arvore.contarFolhasIterativo();
         System.out.println("Total de folhas na árvore: " + totalFolhas);
+
+        // 7) Contar nós com pilha (iterativo, DFS)
+        int totalNosComPilha = arvore.contarNosComPilha(arvore.raiz);
+        System.out.println("Total de nós com pilha (DFS): " + totalNosComPilha);
+
+        // 8) Contar nós com fila (iterativo, BFS)
+        int totalNosComFila = arvore.contarNosComFila(arvore.raiz);
+        System.out.println("Total de nós com fila (BFS): " + totalNosComFila);
     }
 }
